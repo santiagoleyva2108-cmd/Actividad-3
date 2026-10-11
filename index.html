@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+     <header>
+        <h1>Panel de Gestión de Usuarios</h1>
+        <p>Administra, busca, registra y modifica usuarios.</p>
+    </header>
+
+    <main>
+
+        <!-- Formulario para agregar o editar usuarios -->
+
+        <section id="seccion-formulario">
+
+            <h2>Registrar usuario</h2>
+
+            <form id="formulario-usuario">
+
+                <div class="campo">
+                    <label for="id">ID:</label>
+                    <input
+                        type="number"
+                        id="id"
+                        name="id"
+                        placeholder="Ingresa el ID"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="nombre">Nombre completo:</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Ingresa el nombre"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico:</label>
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="ejemplo@correo.com"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="ciudad">Ciudad:</label>
+                    <input
+                        type="text"
+                        id="ciudad"
+                        name="ciudad"
+                        placeholder="Ingresa la ciudad"
+                        required
+                    >
+                </div>
+
+                <button type="submit" id="btn-guardar">
+                    Agregar usuario
+                </button>
+
+            </form>
+        </section>
+
+
+
+        <!-- Buscador de usuarios -->
+
+        <section id="seccion-busqueda">
+
+            <h2>Buscar usuarios</h2>
+
+            <label for="buscador">Buscar por nombre:</label>
+            <input
+                type="text"
+                id="buscador"
+                name="buscador"
+                placeholder="Escribe un nombre..."
+            >
+        </section>
+
+
+        <!-- Mensajes de estado -->
+
+        <p id="mensaje" role="status" aria-live="polite">
+            Cargando usuarios...
+        </p>
+
+
+
+        <!-- Tabla de usuarios -->
+
+        <section id="seccion-tabla">
+            <h2>Lista de usuarios</h2>
+
+            <div class="contenedor-tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Correo electrónico</th>
+                            <th>Ciudad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody id="tabla-usuarios">
+                        
+                    </tbody>
+
+
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Panel de Gestión de Usuarios - Actividad 1</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
